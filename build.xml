@@ -182,12 +182,9 @@
   </exec>
  </target>
 
- <target name="phpdox"
-         depends="phploc-ci,phpcs-ci,phpmd-ci"
-         description="Generate project documentation using phpDox">
+<target name="phpdox" depends="phploc-ci,phpcs-ci,phpmd-ci" description="Generate project documentation using phpDox">
   <exec executable="${toolsdir}phpdox">
    <arg value="--file" />
    <arg value="${basedir}/build/phpdox.xml" />
   </exec>
  </target>
-</project>
