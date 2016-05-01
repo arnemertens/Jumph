@@ -21,12 +21,12 @@ app/config/parameters.yml
 # Composer
 composer.phar
 
-#Capifony
-Capfile
-app/config/deploy.rb
-
-#build
-!build/phpmd.xml
-!build/phpunit.xml
-!build/phpdox.xml
-build/*
+ #Capifony
+  Capfile
+  app/config/deploy.rb
+ 
+ #build
+ !build/phpmd.xml
+ !build/phpunit.xml
+ !build/phpdox.xml
+ build/* 
