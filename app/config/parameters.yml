@@ -21,4 +21,24 @@ parameters:
   </exec>
  </target>
  
+ <target name="composer" description="Installing composer dependencies">
+ <exec executable="composer" failonerror="true">
+  <arg value="install" />
+  <arg value="--dev" />
+  <arg value="--prefer-dist" />
+  <arg value="--no-progress" />
+
+  <env key="SYMFONY_ENV" value="test"/>
+ </exec>
+</target>
+
+<target name="bower" description="Installing bower dependencies">
+ <exec executable="bower" failonerror="true">
+  <arg value="install" />
+ </exec>
+</target>
+
+<target name="build" depends="prepare,copy-parameters,bower,composer,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox" description=""/>
+
+<target name="build" depends="prepare,copy-parameters,bower,composer,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox" description=""/>
  
