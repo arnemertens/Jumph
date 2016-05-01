@@ -1,0 +1,24 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     symfony
+    database_user:     root
+    database_password: ~
+
+    mailer_transport:  smtp
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            en
+    secret:            208d6b10a76608e45246cb0a243184fee53ac8de
+    
+    <target name="copy-parameters" description="Copy parameters.yml file">
+  <exec executable="cp" failonerror="true">
+   <arg path="app/config/parameters.yml.dist" />
+   <arg path="app/config/parameters.yml" />
+  </exec>
+ </target>
+ 
+ 
